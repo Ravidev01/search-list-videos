@@ -7,3 +7,12 @@ input{
     width: 25%;
     padding-left: 10px;
 }
+
+@media (max-width:450px){
+    input{
+        width:50%;
+    }
+
+
+    
+}

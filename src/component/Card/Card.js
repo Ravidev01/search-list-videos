@@ -7,8 +7,8 @@ const Card = ({ data }) => {
       <div className="grid">
         <div>
           <img src={data.snippet.thumbnails.high.url} alt="destination-1" />
-          <h3>{data.snippet.title}</h3>
-          <p>{data.snippet.description}</p>
+          <h3>{`${data.snippet.title.slice(0,60)}...`}</h3>
+          <p>{data.snippet.description.slice(0,136)}</p>
         </div>
       </div>
     </section>

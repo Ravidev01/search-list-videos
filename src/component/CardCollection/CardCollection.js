@@ -3,11 +3,19 @@ import { product } from '../../product'
 import Card from '../Card/Card'
 import Search from '../Search/Search'
 
+const {REACT_APP_API_KEY} = process.env;
+console.log(process.env);
+
+
 const CardCollection = () => {
     const [data,setData] = useState([]);
     const [query,setQuery] =useState("");
     useEffect(()=>{
-        setData(product.items)
+        const data = fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${REACT_APP_API_KEY}`)
+        .then(res =>res.json())
+        .then(res=>setData(res.items))
+
+        // setData(product.items)
     },[])
     console.log(query,"query")
   return (
