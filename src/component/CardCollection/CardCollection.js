@@ -8,7 +8,7 @@ const CardCollection = () => {
     const [query,setQuery] =useState("");
     useEffect(()=>{
         setData(product.items)
-    })
+    },[])
     console.log(query,"query")
   return (
       <>
