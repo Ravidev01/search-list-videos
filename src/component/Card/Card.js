@@ -1,7 +1,7 @@
 import React from "react";
 import "../Card/Card.css";
 const Card = ({ data }) => {
-  console.log(data, "CardData");
+  // console.log(data, "CardData");
   return (
     <section className="destinations">
       <div className="grid">
